@@ -16,6 +16,7 @@ export default class Geometry {
     createPlane(width, height){
         let plane = new THREE.Mesh(new THREE.PlaneGeometry(width, height),
             new THREE.MeshLambertMaterial({color: 0xffffff}));
+        plane.receiveShadow = true;
         return plane;
     }
 
@@ -25,6 +26,16 @@ export default class Geometry {
         let mesh = new THREE.Mesh(box, material);
         mesh.castShadow = true;
         mesh.receiveShadow = true;
+
+        mesh.getRect = function () {
+            return {
+                x:mesh.position.x,
+                y:mesh.position.z,
+                width:width,
+                height:depth
+            }
+        };
+
         return mesh;
     }
 }
