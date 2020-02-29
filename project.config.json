@@ -12,6 +12,8 @@
 	"appid": "wx2a5d4dbba9deb14d",
 	"projectname": "Jump",
 	"isGameTourist": true,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
