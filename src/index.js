@@ -1,7 +1,7 @@
-import '../lib/weapp-adapter'
-import '../lib/symbol'
-import '../lib/Tween'
+import './src/lib/weapp-adapter'
+import './src/lib/symbol'
+import './src/lib/Tween'
 
-import Main from './main'
+import Main from './src/main'
 
 new Main();
